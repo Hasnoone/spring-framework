@@ -13,9 +13,9 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  */
 public class MyApplicationTest {
 	public static void main(String[] args) {
-		ApplicationContext ac = new AnnotationConfigApplicationContext("com.study");
-//		ApplicationContext ac2 = new ClassPathXmlApplicationContext("");
-		TestService testService = ac.getBean(TestServiceImpl.class);
+//		ApplicationContext ac = new AnnotationConfigApplicationContext("com.study");
+		ApplicationContext ac2 = new ClassPathXmlApplicationContext("classpath:TestApplication.xml");
+		TestService testService = ac2.getBean(TestServiceImpl.class);
 		testService.sayHello();
 
 

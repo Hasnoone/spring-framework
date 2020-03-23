@@ -12,6 +12,6 @@ import org.springframework.stereotype.Service;
 public class TestServiceImpl implements TestService {
 	@Override
 	public void sayHello() {
-		System.out.println("Test哈哈哈哈哈");
+		System.out.println("Test·······");
 	}
 }
