@@ -138,9 +138,12 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 			String[] configLocations, boolean refresh, @Nullable ApplicationContext parent)
 			throws BeansException {
 
+		//在这里就是初始化类的成员变量,此处parent为null
 		super(parent);
+		//解析配置文件
 		setConfigLocations(configLocations);
 		if (refresh) {
+			//这个方法就是重点了
 			refresh();
 		}
 	}
