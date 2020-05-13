@@ -8,7 +8,6 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @description
- * @outhor xuhang
  * @create 2020-03-11 10:51
  */
 public class MyApplicationTest {
