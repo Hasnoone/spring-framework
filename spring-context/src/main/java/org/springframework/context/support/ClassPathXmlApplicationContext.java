@@ -51,6 +51,7 @@ import org.springframework.util.Assert;
  */
 public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContext {
 
+	//配置文件数组
 	@Nullable
 	private Resource[] configResources;
 
@@ -71,6 +72,7 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 	 * @see #setConfigLocations
 	 * @see #afterPropertiesSet()
 	 */
+	//指定ApplicationContext的父容器
 	public ClassPathXmlApplicationContext(ApplicationContext parent) {
 		super(parent);
 	}
@@ -138,9 +140,9 @@ public class ClassPathXmlApplicationContext extends AbstractXmlApplicationContex
 			String[] configLocations, boolean refresh, @Nullable ApplicationContext parent)
 			throws BeansException {
 
-		//在这里就是初始化类的成员变量,此处parent为null
+		//在这里就是初始化类的成员变量,指定父容器
 		super(parent);
-		//解析配置文件
+		//根据提供的路径，解析配置文件数组（以分号、逗号、空格、tab、换行符分割）
 		setConfigLocations(configLocations);
 		if (refresh) {
 			//这个方法就是重点了
